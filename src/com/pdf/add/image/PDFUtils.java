@@ -39,7 +39,7 @@ public class PDFUtils {
 			// Add to document
 			document.add(image1);
 		} catch (Exception e) {
-			System.out.println("Adding Image Failed. :: " + e.getMessage());
+			System.out.println("Adding Image Failed.:: " + e.getMessage());
 		}
 
 	}
