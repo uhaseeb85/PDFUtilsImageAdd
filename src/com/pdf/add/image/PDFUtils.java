@@ -22,13 +22,13 @@ public class PDFUtils {
 	 * @param tableData the table data
 	 * @throws Exception the exception
 	 */
-	public void addImage(Document document, float xAxisPosition, float yAxisPosition, int scaleXaxis, int scaleYaxis) {
+	public static void addImage(Document document, float xAxisPosition, float yAxisPosition, int scaleXaxis, int scaleYaxis) {
 		try {
 			document.add(Chunk.NEWLINE);
 			document.add(Chunk.NEWLINE);
 			
-			ClassLoader classLoader = getClass().getClassLoader();
-			URL resource = classLoader.getResource("LRQA_Logo.jpg");
+			ClassLoader classLoader = PDFUtils.class.getClassLoader();
+			URL resource = classLoader.getResource("resources/LRQA_Logo.jpg");
 			// Add Image
 			Image image1 = Image.getInstance(resource);
 			// Fixed Positioning
